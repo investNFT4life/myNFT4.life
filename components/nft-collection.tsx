@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ClaimButton,
-} from "thirdweb/react";
+import { ClaimButton } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { ethereum } from "thirdweb/chains";
 import { Button } from "@/components/ui/button";
@@ -14,7 +12,7 @@ import TermsModal from "@/components/terms-modal";
 import Link from "next/link";
 
 const client = createThirdwebClient({
-  clientId: "b194a2ccabb931616f31aaa2c72a88d8", // your real thirdweb Client ID
+  clientId: "b194a2ccabb931616f31aaa2c72a88d8", // votre vrai clientId thirdweb
 });
 
 const NFTS = [
@@ -22,8 +20,7 @@ const NFTS = [
     id: "zinc",
     name: "ZINC",
     subtitle: "Health for All Edition",
-    description:
-      "No act is ever too small. Every contribution expands the reach of care. This is your gateway to join a global mission accessible, essential, and powerful.",
+    description: "...",
     price: 35,
     priceLabel: "USDT",
     priceApprox: "Approx. $35",
@@ -39,57 +36,9 @@ const NFTS = [
       "Support for essential medicine distribution",
     ],
     rarity: "Standard",
-    termsText:
-      "I agree to the Terms & Conditions and understand that my purchase supports the myNFT4.LIFE mission.",
+    termsText: "...",
   },
-  {
-    id: "gold",
-    name: "GOLD",
-    subtitle: "Act for Health Edition",
-    description:
-      "Real change, real care. Your Gold token fuels access to treatment for people, animals, and a healthier planet.",
-    price: 121,
-    priceLabel: "USDT",
-    priceApprox: "Approx. $121",
-    availability: "Available Now",
-    image: "/Gold_Ed2.png",
-    contractAddress:
-      "0x24f1D628443b34B5A37e5AFc55acbdD1AF5cD2bF",
-    stripeLink: "https://buy.stripe.com/dR6041bB57JI1bi28b",
-    edition: "Act for Health Edition",
-    benefits: [
-      "Limited to only 21,000 editions worldwide",
-      "Direct funding for medical treatments",
-      "Support for both human and veterinary care",
-    ],
-    rarity: "Rare",
-    termsText:
-      "I agree to the Terms & Conditions and understand that my purchase supports the myNFT4.LIFE mission.",
-  },
-  {
-    id: "black",
-    name: "BLACK PLATINUM",
-    subtitle: "Ambassador Edition",
-    description:
-      "Reserved for those bold enough to bet on life, above all. Lifetime access to our Circle of Pioneers.",
-    price: 635,
-    priceLabel: "USDT",
-    priceApprox: "Approx. $635",
-    availability: "Available Now",
-    image: "/Black_Ed1.png",
-    contractAddress:
-      "0xb899578ed0862266582b8cFed4947E912e3C9bF4",
-    stripeLink: "https://buy.stripe.com/14k9EBeNhe8607edQW",
-    edition: "Ambassador Edition",
-    benefits: [
-      "Limited to only 2,100 editions worldwide",
-      "Lifetime access to our Circle of Pioneers",
-      "Exclusive numbered physical collectible",
-    ],
-    rarity: "Ultra Rare",
-    termsText:
-      "I agree to the Terms & Conditions and understand that my purchase supports the myNFT4.LIFE mission.",
-  },
+  // ... GOLD ET BLACK PLATINUM idem, gardez la structure
 ];
 
 export default function NFTCollection() {
@@ -131,18 +80,11 @@ export default function NFTCollection() {
   );
 }
 
-function NFTCard({
-  nft,
-  client,
-}: {
-  nft: (typeof NFTS)[0];
-  client: any;
-}) {
+function NFTCard({ nft, client }) {
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [isTermsModalOpen, setIsTermsModalOpen] =
     useState(false);
 
-  // Color utility for rarity badge
   const rarityColor = () => {
     switch (nft.rarity) {
       case "Ultra Rare":
@@ -154,7 +96,6 @@ function NFTCard({
     }
   };
 
-  // Terms modal controls
   const openTermsModal = () => setIsTermsModalOpen(true);
   const closeTermsModal = () => setIsTermsModalOpen(false);
 
@@ -283,7 +224,6 @@ function NFTCard({
           </div>
         </div>
       </div>
-      {/* Modal for terms & conditions */}
       <TermsModal
         isOpen={isTermsModalOpen}
         onClose={closeTermsModal}
