@@ -191,7 +191,9 @@ function NFTCard({ nft, client }: { nft: (typeof NFTS)[0]; client: any }) {
               id={`terms-${nft.id}`}
               checked={termsAccepted}
               onCheckedChange={(checked) => setTermsAccepted(!!checked)}
-              className="mt-1"
+              className={`mt-1 ${
+                !termsAccepted ? "border-red-500 bg-red-100" : "border-cyan-400 bg-white"
+              }`}
             />
             <div>
               <Label htmlFor={`terms-${nft.id}`} className="text-sm text-gray-400">
