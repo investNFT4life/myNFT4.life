@@ -224,11 +224,9 @@ function NFTCard({
             <Checkbox
               id={`terms-${nft.id}`}
               checked={termsAccepted}
-              onCheckedChange={(checked) =>
-                setTermsAccepted(!!checked)
-              }
+              onCheckedChange={(checked) => setTermsAccepted(!!checked)}
               className="mt-1"
-            />
+            />  
             <div>
               <Label
                 htmlFor={`terms-${nft.id}`}
