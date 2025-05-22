@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import {
-  ClaimButton,
-} from "thirdweb/react";
+import { ClaimButton } from "thirdweb/react";
 import { createThirdwebClient } from "thirdweb";
 import { ethereum } from "thirdweb/chains";
 import { Button } from "@/components/ui/button";
@@ -14,7 +12,7 @@ import TermsModal from "@/components/terms-modal";
 import Link from "next/link";
 
 const client = createThirdwebClient({
-  clientId: "b194a2ccabb931616f31aaa2c72a88d8", // your real thirdweb Client ID
+  clientId: "b194a2ccabb931616f31aaa2c72a88d8",
 });
 
 const NFTS = [
@@ -29,8 +27,7 @@ const NFTS = [
     priceApprox: "Approx. $35",
     availability: "Available Now",
     image: "/Zinc_Ed3.png",
-    contractAddress:
-      "0xf8a6391ed1bc9815D9C03BBf165AA32404Bade57",
+    contractAddress: "0xf8a6391ed1bc9815D9C03BBf165AA32404Bade57",
     stripeLink: "https://buy.stripe.com/8wMg2ZfRlaVU5rycMT",
     edition: "Health for All Edition",
     benefits: [
@@ -53,8 +50,7 @@ const NFTS = [
     priceApprox: "Approx. $121",
     availability: "Available Now",
     image: "/Gold_Ed2.png",
-    contractAddress:
-      "0x24f1D628443b34B5A37e5AFc55acbdD1AF5cD2bF",
+    contractAddress: "0x24f1D628443b34B5A37e5AFc55acbdD1AF5cD2bF",
     stripeLink: "https://buy.stripe.com/dR6041bB57JI1bi28b",
     edition: "Act for Health Edition",
     benefits: [
@@ -77,8 +73,7 @@ const NFTS = [
     priceApprox: "Approx. $635",
     availability: "Available Now",
     image: "/Black_Ed1.png",
-    contractAddress:
-      "0xb899578ed0862266582b8cFed4947E912e3C9bF4",
+    contractAddress: "0xb899578ed0862266582b8cFed4947E912e3C9bF4",
     stripeLink: "https://buy.stripe.com/14k9EBeNhe8607edQW",
     edition: "Ambassador Edition",
     benefits: [
@@ -103,10 +98,7 @@ export default function NFTCollection() {
           Our Exclusive Collection
         </h2>
         <p className="text-lg md:text-xl text-gray-300 mb-4">
-          This is your moment to make a difference. The NFT
-          you choose is more than a symbol — it's a personal
-          stand for global health, a declaration that no
-          life should be left without care.
+          This is your moment to make a difference. The NFT you choose is more than a symbol — it's a personal stand for global health, a declaration that no life should be left without care.
         </p>
         <p className="text-lg md:text-xl text-gray-300 mb-4">
           Pick your edition. Power the mission.
@@ -131,18 +123,10 @@ export default function NFTCollection() {
   );
 }
 
-function NFTCard({
-  nft,
-  client,
-}: {
-  nft: (typeof NFTS)[0];
-  client: any;
-}) {
+function NFTCard({ nft, client }: { nft: (typeof NFTS)[0]; client: any }) {
   const [termsAccepted, setTermsAccepted] = useState(false);
-  const [isTermsModalOpen, setIsTermsModalOpen] =
-    useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
 
-  // Color utility for rarity badge
   const rarityColor = () => {
     switch (nft.rarity) {
       case "Ultra Rare":
@@ -154,7 +138,6 @@ function NFTCard({
     }
   };
 
-  // Terms modal controls
   const openTermsModal = () => setIsTermsModalOpen(true);
   const closeTermsModal = () => setIsTermsModalOpen(false);
 
@@ -182,40 +165,23 @@ function NFTCard({
             <h3 className="text-2xl font-bold text-white bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
               {nft.name}
             </h3>
-            <p className="text-gray-300 text-sm">
-              {nft.subtitle || nft.edition}
-            </p>
+            <p className="text-gray-300 text-sm">{nft.subtitle || nft.edition}</p>
           </div>
-          <p className="text-gray-300 mb-4">
-            {nft.description}
-          </p>
+          <p className="text-gray-300 mb-4">{nft.description}</p>
           <div className="mb-4">
-            <h4 className="text-sm font-semibold text-gray-400 mb-1">
-              Price
-            </h4>
+            <h4 className="text-sm font-semibold text-gray-400 mb-1">Price</h4>
             <p className="text-cyan-400 font-semibold text-xl">
               {nft.price} {nft.priceLabel || "ETH"}
             </p>
-            {nft.priceApprox && (
-              <p className="text-gray-400 text-sm">
-                {nft.priceApprox}
-              </p>
-            )}
-            {nft.availability && (
-              <p className="text-green-400 text-sm mt-1">
-                {nft.availability}
-              </p>
-            )}
+            {nft.priceApprox && <p className="text-gray-400 text-sm">{nft.priceApprox}</p>}
+            {nft.availability && <p className="text-green-400 text-sm mt-1">{nft.availability}</p>}
           </div>
           <div className="mb-4">
             <h4 className="text-sm font-semibold text-gray-400 mb-2">{`${nft.name} Benefits`}</h4>
             <ul className="text-sm text-gray-300 space-y-1">
               {nft.benefits.map((benefit, idx) => (
                 <li key={idx} className="flex items-center">
-                  <span className="mr-2 text-cyan-400">
-                    ✓
-                  </span>{" "}
-                  {benefit}
+                  <span className="mr-2 text-cyan-400">✓</span> {benefit}
                 </li>
               ))}
             </ul>
@@ -226,12 +192,9 @@ function NFTCard({
               checked={termsAccepted}
               onCheckedChange={(checked) => setTermsAccepted(!!checked)}
               className="mt-1"
-            />  
+            />
             <div>
-              <Label
-                htmlFor={`terms-${nft.id}`}
-                className="text-sm text-gray-400"
-              >
+              <Label htmlFor={`terms-${nft.id}`} className="text-sm text-gray-400">
                 I agree to the{" "}
                 <button
                   type="button"
@@ -240,17 +203,9 @@ function NFTCard({
                 >
                   Terms & Conditions
                 </button>{" "}
-                and understand that my purchase supports the
-                myNFT4.LIFE mission.
+                and understand that my purchase supports the myNFT4.LIFE mission.
               </Label>
-              <p className="text-xs text-gray-500 mt-1">
-                <Link
-                  href="/terms"
-                  className="text-gray-500 hover:text-cyan-400 transition-colors"
-                >
-                  View full Terms & Conditions
-                </Link>
-              </p>
+              {/* Lien "View full Terms & Conditions" supprimé */}
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4">
@@ -270,9 +225,7 @@ function NFTCard({
               rel="noopener noreferrer"
               className="w-full inline-block border border-purple-500 text-purple-500 font-semibold rounded-lg text-center py-2 px-4 hover:bg-purple-500/10 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               style={{
-                pointerEvents: !termsAccepted
-                  ? "none"
-                  : undefined,
+                pointerEvents: !termsAccepted ? "none" : undefined,
                 opacity: !termsAccepted ? 0.5 : 1,
               }}
             >
@@ -281,11 +234,7 @@ function NFTCard({
           </div>
         </div>
       </div>
-      {/* Modal for terms & conditions */}
-      <TermsModal
-        isOpen={isTermsModalOpen}
-        onClose={closeTermsModal}
-      />
+      <TermsModal isOpen={isTermsModalOpen} onClose={closeTermsModal} />
     </>
   );
 }
