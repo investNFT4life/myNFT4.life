@@ -98,7 +98,7 @@ export default function Header() {
             </a>
             {/* TikTok */}
             <a
-              href="https://tiktok.com/mynft4.life"
+              href="https://tiktok.com/@mynft4.life?_t=ZN-8wZ1nsix090&_r=1"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
