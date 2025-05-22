@@ -24,110 +24,129 @@ const TermsModal: React.FC<TermsModalProps> = ({
         <DialogHeader>
           <DialogTitle>Terms & Conditions</DialogTitle>
           <DialogDescription>
-            Please read and accept the following terms and
-            conditions before proceeding.
+            (NFT Participation Agreement – myNFT4.life)
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 text-sm text-gray-900">
-          <p>
-            Please read these terms and conditions carefully
-            before using our service.
-          </p>
-
           <b>1. Introduction</b>
           <p>
-            Welcome to myNFT4.life. These Terms and
-            Conditions govern your use of our website and
-            services, including the purchase and ownership
-            of our NFTs.
+            myNFT4.life is a global initiative merging digital innovation, medical progress, and humanitarian action.
+            By acquiring one of our NFTs, you are not simply purchasing a digital asset — you are actively supporting the deployment of life-saving medical technology to underserved populations around the world.
           </p>
 
-          <b>2. NFT Ownership</b>
+          <b>2. NFT Structure</b>
           <p>
-            When you purchase an NFT from myNFT4.life, you
-            own the NFT (the non-fungible token) that points
-            to a specific digital asset. Your purchase of
-            the NFT means:
+            A total of 231,100 NFTs will be issued, divided into three symbolic editions:
           </p>
           <ul className="list-disc pl-6">
             <li>
-              You have a right to sell, trade, or transfer
-              the NFT.
+              <b>Black Platinum Edition – Ambassador</b>
+              <ul className="list-disc pl-6">
+                <li>Limited to 2,100 NFTs only</li>
+                <li>Includes a numbered physical medical device + box of 10 consumables</li>
+                <li>Grants lifetime ambassador status</li>
+              </ul>
             </li>
             <li>
-              You have a license to display the associated
-              digital asset for personal, non-commercial
-              use.
+              <b>Gold Edition – Act For Life</b>
+              <ul className="list-disc pl-6">
+                <li>Limited to 21,000 NFTs</li>
+                <li>Digital token granting access to our innovation platform and impact roadmap</li>
+              </ul>
             </li>
             <li>
-              You do not own the copyright, trademark, or
-              other intellectual property rights to the
-              underlying content.
+              <b>Zinc Edition – Health for All</b>
+              <ul className="list-disc pl-6">
+                <li>Limited to 210,000 NFTs</li>
+                <li>Entry-level token supporting the mission, with access to updates and milestones</li>
+              </ul>
             </li>
           </ul>
-
-          <b>3. Use of Funds</b>
           <p>
-            myNFT4.life is committed to transparency in how
-            funds from NFT sales are used. A significant
-            portion of proceeds will be directed toward
-            medical initiatives, healthcare access, and
-            veterinary care as outlined in our mission
-            statement.
+            All NFTs are unique, verifiable, and minted on the blockchain. Ownership is transferred automatically upon confirmed payment (via crypto or Stripe).
           </p>
 
-          <b>4. Prohibited Activities</b>
-          <p>You agree not to:</p>
+          <b>3. Purpose & Value</b>
+          <p>
+            By purchasing an NFT, you confirm your participation in the mission of myNFT4.life.
+            These NFTs do not represent financial equity or investment, but are symbols of impact and solidarity for global health.
+          </p>
+          <p>
+            Each token directly supports the development and delivery of certified medical technologies in:
+          </p>
           <ul className="list-disc pl-6">
-            <li>Use the NFT for any illegal purpose.</li>
-            <li>
-              Infringe upon the intellectual property rights
-              of myNFT4.life or any third party.
-            </li>
-            <li>
-              Use the NFT or associated content in a manner
-              that is harmful, fraudulent, deceptive,
-              threatening, harassing, defamatory, obscene,
-              or otherwise objectionable.
-            </li>
+            <li>Cardiology</li>
+            <li>Pediatrics</li>
+            <li>STI/STD prevention and screening</li>
+            <li>Drug use detection</li>
+            <li>Animal health diagnostics</li>
+          </ul>
+          <p>
+            This initiative is built to serve both human and animal populations, especially in vulnerable and underserved areas.
+          </p>
+
+          <b>4. Ambassador Privileges – Black Platinum Edition</b>
+          <p>
+            Holders of the Black Platinum Edition (2,100 only) receive:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>A collector-numbered medical device</li>
+            <li>A box of 10 consumables</li>
+            <li>Exclusive early access to beta features, product launches, and private testing</li>
+            <li>Recognition as founding ambassadors of the initiative</li>
+            <li>Optional involvement in humanitarian field deployments</li>
           </ul>
 
-          <b>5. Disclaimers</b>
+          <b>5. Transparency & Use of Funds</b>
           <p>
-            NFTs are a relatively new and evolving
-            technology. The value of NFTs can be volatile
-            and may decrease over time. myNFT4.life makes no
-            guarantees regarding the future value of the
-            NFTs sold on our platform.
+            All proceeds are strictly allocated to:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>Manufacturing and distributing diagnostic medical tools</li>
+            <li>Supporting public health missions in high-priority zones (Sub-Saharan Africa, Southeast Asia, refugee camps, etc.)</li>
+            <li>Maintaining the NFT infrastructure (smart contracts, hosting, compliance)</li>
+          </ul>
+          <p>
+            We are committed to full transparency and will share regular progress reports with our community.
           </p>
 
-          <b>6. Limitation of Liability</b>
+          <b>6. Our Vision</b>
           <p>
-            To the maximum extent permitted by law,
-            myNFT4.life shall not be liable for any
-            indirect, incidental, special, consequential, or
-            punitive damages, or any loss of profits or
-            revenues, whether incurred directly or
-            indirectly, or any loss of data, use, goodwill,
-            or other intangible losses.
+            We believe health is a human right — not a privilege.
+            This project was born from the urgent need to challenge broken systems and deliver real solutions.
+          </p>
+          <p>
+            myNFT4.life is more than a campaign — it’s a movement.
+            A resistance through care, led by people who choose action over indifference.
+          </p>
+          <p>
+            Our goal: multiply the impact of each NFT by 5× within 5 years.
           </p>
 
-          <b>7. Changes to Terms</b>
+          <b>7. Refund Policy</b>
           <p>
-            myNFT4.life reserves the right to modify these
-            Terms at any time. We will provide notice of
-            significant changes by posting the updated Terms
-            on our website.
+            Due to the immutable nature of blockchain and NFT minting, all sales are final.
+            In the event of technical issues or delivery concerns, our team will provide individual support with full transparency and diligence.
           </p>
 
-          <b>8. Contact Information</b>
+          <b>8. Privacy & Data</b>
           <p>
-            If you have any questions about these Terms,
-            please contact us at invest.m21@proton.me.
+            We only collect essential information: name, email, and shipping address (for Black Edition only).
+            Your data is stored securely, and is never sold or shared with third parties.
           </p>
+
+          <b>9. Confirmation & Delivery</b>
+          <p>
+            After successful payment:
+          </p>
+          <ul className="list-disc pl-6">
+            <li>You will receive a confirmation email</li>
+            <li>Your NFT will be delivered to your wallet or via email-based minting (if applicable)</li>
+            <li>(For Black Edition) Your physical medical device + consumables will be shipped securely with tracking</li>
+          </ul>
 
           <span className="text-xs text-gray-500">
-            Last updated: May 7, 2025
+            Last updated: May 22, 2025
           </span>
         </div>
       </DialogContent>
